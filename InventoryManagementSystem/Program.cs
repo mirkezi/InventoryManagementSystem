@@ -63,7 +63,7 @@ public class InventoryManagementSystem
         int stock = Convert.ToInt32(Console.ReadLine());
         productStock.Add(stock);
 
-        Console.WriteLine("Product added successfully.");
+        Console.WriteLine($"Product {name} added successfully.");
     }
     
     // UpdateStock() method
@@ -76,18 +76,21 @@ public class InventoryManagementSystem
             Console.WriteLine("No products available in your inventory.");
             return;
         }
-        Console.WriteLine("Enter product number you wish to update stock: ");
-        if (int.TryParse(Console.ReadLine(), out int choice) && choice < 0 && choice < productName.Count)
-        {
-            Console.WriteLine($"{productName[choice - 1]} stock: {productStock[choice - 1]}");
-            Console.WriteLine("Insert new stock: ");
-            productStock[choice - 1] = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"{productName[choice - 1]} updated stock: {productStock[choice - 1]}");
-        }
         else
         {
-            Console.WriteLine("Invalid product number");
-            return;
+            Console.WriteLine("Enter product number you wish to update stock: ");
+            if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= productName.Count)
+            {
+                Console.WriteLine($"{productName[choice - 1]} stock: {productStock[choice - 1]}");
+                Console.WriteLine("Insert new stock: ");
+                productStock[choice - 1] = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"{productName[choice - 1]} updated stock: {productStock[choice - 1]}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid product number");
+                return;
+            }
         }
     }
     
@@ -99,13 +102,15 @@ public class InventoryManagementSystem
         {
             Console.WriteLine("No products available in your inventory");
         }
-
-        Console.WriteLine("List of products in your inventory: ");
-
-        for (int i = 0; i < productName.Count; i++)
+        else
         {
-            Console.WriteLine($"{i + 1} -> Product: {productName[i]} / Price: {productPrice[i]} / Stock: {productStock[i]}");
-        }
+            Console.WriteLine("List of products in your inventory: ");
+
+            for (int i = 0; i < productName.Count; i++)
+            {
+                Console.WriteLine($"{i + 1} -> Product: {productName[i]} / Price: {productPrice[i]} / Stock: {productStock[i]}");
+            }
+        }    
     }
 
     // RemoveProduct() method
@@ -116,20 +121,22 @@ public class InventoryManagementSystem
         {
             Console.WriteLine("No products available in your inventory");
         }
-
-        Console.WriteLine("Enter product number you wish to remove: ");
-        if (int.TryParse(Console.ReadLine(), out int choice) && choice < 0 && choice < productName.Count)
-        {
-            int i = choice - 1;
-            productName.RemoveAt(i);
-            productPrice.RemoveAt(i);
-            productStock.RemoveAt(i);
-            Console.WriteLine("Product successfully removed from inventory.");
-        }
         else
         {
-            Console.WriteLine("Invalid product number.");
-            return;
+            Console.WriteLine("Enter product number you wish to remove: ");
+            if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= productName.Count)
+            {
+                int i = choice - 1;
+                productName.RemoveAt(i);
+                productPrice.RemoveAt(i);
+                productStock.RemoveAt(i);
+                Console.WriteLine("Product successfully removed from inventory.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid product number.");
+                return;
+            }
         }
     }
 }
