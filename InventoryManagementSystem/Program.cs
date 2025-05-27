@@ -4,7 +4,7 @@ public class InventoryManagementSystem
 {
     // Variable declaration
     static List<string> productName = new List<string>();
-    static List<double> productPrice = new List<double>();
+    static List<decimal> productPrice = new List<decimal>();
     static List<int> productStock = new List<int>();
 
     // Main function to display interface and allow for user method () choice.
@@ -56,7 +56,7 @@ public class InventoryManagementSystem
         productName.Add(name);
 
         Console.WriteLine("Enter product price: ");
-        double price = Convert.ToDouble(Console.ReadLine());
+        decimal price = Convert.ToDecimal(Console.ReadLine());
         productPrice.Add(price);
 
         Console.WriteLine("Enter product stock: ");
@@ -107,7 +107,7 @@ public class InventoryManagementSystem
             Console.WriteLine($"{i + 1} -> Product: {productName[i]} / Price: {productPrice[i]} / Stock: {productStock[i]}");
         }
     }
-    
+
     // RemoveProduct() method
     static void RemoveProduct()
     {

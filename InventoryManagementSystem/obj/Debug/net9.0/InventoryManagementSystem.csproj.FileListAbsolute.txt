@@ -1,0 +1,15 @@
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0\InventoryManagementSystem.exe
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0\InventoryManagementSystem.deps.json
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0\InventoryManagementSystem.runtimeconfig.json
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0\InventoryManagementSystem.dll
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\bin\Debug\net9.0\InventoryManagementSystem.pdb
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\InventoryManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\InventoryManagementSystem.AssemblyInfoInputs.cache
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\InventoryManagementSystem.AssemblyInfo.cs
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\InventoryManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\InventoryManagementSystem.sourcelink.json
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\InventoryManagementSystem.dll
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\refint\InventoryManagementSystem.dll
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\InventoryManagementSystem.pdb
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\InventoryManagementSystem.genruntimeconfig.cache
+C:\Users\mirko\Desktop\Projects\InventoryManagementSystem\InventoryManagementSystem\obj\Debug\net9.0\ref\InventoryManagementSystem.dll
