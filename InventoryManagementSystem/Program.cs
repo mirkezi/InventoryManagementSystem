@@ -86,7 +86,17 @@ public class InventoryManagementSystem
     // ViewInventory() method
     static void ViewInventory()
     {
+        if (productName.Count == 0)
+        {
+            Console.WriteLine("No products available in your inventory");
+        }
 
+        Console.WriteLine("List of products in your inventory: ");
+        
+        for (int i = 0; i < productName.Count; i++)
+        {
+            Console.WriteLine($"{i + 1} -> Product: {productName[i]} / Price: {productPrice[i]} / Stock: {productStock[i]}");
+        }
     }
     // RemoveProduct() method
     static void RemoveProduct()
