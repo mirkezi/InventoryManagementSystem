@@ -3,9 +3,9 @@
 public class InventoryManagementSystem
 {
     // Variable declaration
-    static List<string> product = new List<string>();
-    static List<double> price = new List<double>();
-    static List<int> stock = new List<int>();
+    static List<string> productName = new List<string>();
+    static List<double> productPrice = new List<double>();
+    static List<int> productStock = new List<int>();
 
     // Main function to display interface and allow for user method () choice.
     static void Main(string[] args)
@@ -46,7 +46,21 @@ public class InventoryManagementSystem
     // AddProduct() method
     static void AddProduct()
     {
+        //Prompt the user for product name, price and stock. Display successful message.
 
+        Console.WriteLine("Enter product name: ");
+        string name = Console.ReadLine();
+        productName.Add(name);
+
+        Console.WriteLine("Enter product price: ");
+        double price = Convert.ToDouble(Console.ReadLine());
+        productPrice.Add(price);
+
+        Console.WriteLine("Enter product stock: ");
+        int stock = Convert.ToInt32(Console.ReadLine());
+        productStock.Add(stock);
+
+        Console.WriteLine("Product added successfully.");
     }
     // UpdateStock() method
     static void UpdateStock()
