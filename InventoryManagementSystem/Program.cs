@@ -101,6 +101,24 @@ public class InventoryManagementSystem
     // RemoveProduct() method
     static void RemoveProduct()
     {
-        
+        if (productName.Count == 0)
+        {
+            Console.WriteLine("No products available in your inventory");
+        }
+
+        Console.WriteLine("Enter product number you wish to remove: ");
+        if (int.TryParse(Console.ReadLine(), out int choice) && choice < 0 && choice < productName.Count)
+        {
+            int i = choice - 1;
+            productName.RemoveAt(i);
+            productPrice.RemoveAt(i);
+            productStock.RemoveAt(i);
+            Console.WriteLine("Product successfully removed from inventory.");
+        }
+        else
+        {
+            Console.WriteLine("Invalid product number.");
+            return;
+        }
     }
 }
