@@ -65,7 +65,23 @@ public class InventoryManagementSystem
     // UpdateStock() method
     static void UpdateStock()
     {
-
+        if (productName.Count == 0)
+        {
+            Console.WriteLine("No products available in your inventory.");
+            return;
+        }
+        Console.WriteLine("Enter product number you wish to update stock: ");
+        if (int.TryParse(Console.ReadLine(), out int choice) && choice < 0 && choice < productName.Count)
+        {
+            Console.WriteLine($"{productName[choice - 1]} stock: {productStock[choice - 1]}");
+            Console.WriteLine("Insert new stock: ");
+            productStock[choice - 1] = Convert.ToInt32(Console.ReadLine());
+        }
+        else
+        {
+            Console.WriteLine("Invalid product number");
+            return;
+        }
     }
     // ViewInventory() method
     static void ViewInventory()
