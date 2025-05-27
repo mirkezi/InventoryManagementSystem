@@ -31,7 +31,7 @@ The designed flowchart is in the project directory under 'InventoryManagementSys
 
 1. Main() method to display interface. Based on while loop, until user choose the exit option.
 
-2. AddProducts() method to add new products with name, price and stock.
+2. AddProduct() method to add a new product with name, price and stock.
 
 3. UpdateStock() method to access a product and modify the stock. Check if any product has been added, if not return; + ask which to update + modify data.
 
