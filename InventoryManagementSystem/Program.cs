@@ -12,6 +12,7 @@ public class InventoryManagementSystem
     {
         while (true)
         {
+            // Display interface with available option for user.
             Console.WriteLine("Inventory Management System:");
             Console.WriteLine("1. Add Product");
             Console.WriteLine("2. Update Stock");
@@ -20,6 +21,8 @@ public class InventoryManagementSystem
             Console.WriteLine("5. Exit");
 
             int choice = int.Parse(Console.ReadLine());
+
+            // Use switch conditional statement to apply logic.
             switch (choice)
             {
                 case 1:
@@ -43,11 +46,11 @@ public class InventoryManagementSystem
             }
         }
     }
+
     // AddProduct() method
     static void AddProduct()
     {
         //Prompt the user for product name, price and stock. Display successful message.
-
         Console.WriteLine("Enter product name: ");
         string name = Console.ReadLine();
         productName.Add(name);
@@ -62,9 +65,12 @@ public class InventoryManagementSystem
 
         Console.WriteLine("Product added successfully.");
     }
+    
     // UpdateStock() method
     static void UpdateStock()
     {
+        // Prompt the user for a product number, then display product name and actual stock, 
+        // lastly prompt for new stock and display to user.
         if (productName.Count == 0)
         {
             Console.WriteLine("No products available in your inventory.");
@@ -76,6 +82,7 @@ public class InventoryManagementSystem
             Console.WriteLine($"{productName[choice - 1]} stock: {productStock[choice - 1]}");
             Console.WriteLine("Insert new stock: ");
             productStock[choice - 1] = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"{productName[choice - 1]} updated stock: {productStock[choice - 1]}");
         }
         else
         {
@@ -83,24 +90,28 @@ public class InventoryManagementSystem
             return;
         }
     }
+    
     // ViewInventory() method
     static void ViewInventory()
     {
+        // Display a list of products available in inventory with name, price and stock.
         if (productName.Count == 0)
         {
             Console.WriteLine("No products available in your inventory");
         }
 
         Console.WriteLine("List of products in your inventory: ");
-        
+
         for (int i = 0; i < productName.Count; i++)
         {
             Console.WriteLine($"{i + 1} -> Product: {productName[i]} / Price: {productPrice[i]} / Stock: {productStock[i]}");
         }
     }
+    
     // RemoveProduct() method
     static void RemoveProduct()
     {
+        // Prompt the user for product number, remove from all three lists and display successful message.
         if (productName.Count == 0)
         {
             Console.WriteLine("No products available in your inventory");
